@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+  font-family: sans-serif;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  text-align: center;
+  line-height: 100px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.box.active {
+  height: 200px;
+  background-color: lightcoral;
+  line-height: normal;
+  padding: 10px;
+}
+
+.options {
+  display: none;
+  margin-top: 10px;
+}
+
+.box.active .options {
+  display: block;
+}
