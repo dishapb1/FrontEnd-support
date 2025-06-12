@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bundle & Save</title>
+  <title>Cosmetics Bundle Offer</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f4f3;
+      font-family: Arial, sans-serif;
+      background-color: #f7f0f5;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,157 +16,148 @@
     }
 
     .container {
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      padding: 30px 25px;
-      width: 350px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 320px;
     }
 
     .title {
       text-align: center;
-      color: #007040;
+      color: #b30059;
       font-weight: bold;
       margin-bottom: 20px;
-      font-size: 1.2rem;
     }
 
     .bundle {
       border: 2px solid #ccc;
-      border-radius: 10px;
-      padding: 15px;
+      border-radius: 8px;
+      padding: 10px;
       margin-bottom: 15px;
-      position: relative;
     }
 
     .bundle.selected {
-      border-color: #007040;
-      background-color: #e6f2ef;
+      border-color: #b30059;
+      background-color: #fce6f1;
     }
 
     .bundle input {
-      position: absolute;
-      left: 15px;
-      top: 20px;
-    }
-
-    .bundle-content {
-      padding-left: 35px;
+      margin-right: 10px;
     }
 
     .price {
       font-weight: bold;
+      color: #333;
     }
 
     .discount {
       float: right;
-      color: #007040;
-      font-weight: bold;
+      color: #b30059;
     }
 
-    .tag {
-      font-size: 0.75rem;
-      color: white;
-      background-color: #007040;
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-left: 10px;
-    }
-
-    .selection {
-      display: flex;
-      justify-content: space-between;
+    .selects {
       margin-top: 10px;
     }
 
-    .selection select {
-      width: 48%;
-      padding: 6px;
-      border-radius: 6px;
+    select {
+      width: 100%;
+      margin-top: 5px;
+      padding: 5px;
+      border-radius: 4px;
       border: 1px solid #ccc;
     }
 
-    .info {
-      color: #007040;
+    .info, .total {
       margin-top: 10px;
-      font-size: 0.9rem;
-    }
-
-    .total {
-      text-align: right;
       font-weight: bold;
-      margin-top: 5px;
+      color: #b30059;
     }
 
     .button {
-      margin-top: 20px;
-      background-color: #007040;
-      color: white;
-      border: none;
       width: 100%;
-      padding: 12px;
-      font-size: 1rem;
-      border-radius: 8px;
+      background-color: #b30059;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 15px;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="title">Bundle & Save</div>
+    <div class="title">Choose Your Lipstick Bundle</div>
 
-    <div class="bundle">
-      <input type="radio" name="bundle" />
-      <div class="bundle-content">
-        <div class="price">1 Pair - DKK 195.00 <span class="discount">50% OFF</span></div>
+    <div class="bundle" data-price="195">
+      <label>
+        <input type="radio" name="bundle" />
+        1 Lipstick - DKK 195 <span class="discount">20% OFF</span>
+      </label>
+    </div>
+
+    <div class="bundle" data-price="345">
+      <label>
+        <input type="radio" name="bundle" />
+        2 Lipsticks - DKK 345 <span class="discount">30% OFF</span>
+      </label>
+    </div>
+
+    <div class="bundle selected" data-price="360">
+      <label>
+        <input type="radio" name="bundle" checked />
+        3 Lipsticks - DKK 528 <span class="discount">50% OFF</span>
+      </label>
+
+      <div class="selects">
+        <select>
+          <option>Choose Type</option>
+          <option>Matte</option>
+          <option>Glossy</option>
+          <option>Creamy</option>
+        </select>
+        <select>
+          <option>Choose Shade</option>
+          <option>Rose</option>
+          <option>Nude</option>
+          <option>Berry</option>
+        </select>
+      </div>
+
+      <div class="selects">
+        <select>
+          <option>Choose Type</option>
+          <option>Matte</option>
+          <option>Glossy</option>
+          <option>Creamy</option>
+        </select>
+        <select>
+          <option>Choose Shade</option>
+          <option>Rose</option>
+          <option>Nude</option>
+          <option>Berry</option>
+        </select>
       </div>
     </div>
 
-    <div class="bundle">
-      <input type="radio" name="bundle" />
-      <div class="bundle-content">
-        <div class="price">2 Pair - DKK 345.00 <span class="discount">40% OFF</span> <span class="tag">Most Popular</span></div>
-      </div>
-    </div>
-
-    <div class="bundle selected">
-      <input type="radio" name="bundle" checked />
-      <div class="bundle-content">
-        <div class="price">3 Pair - DKK 528.00 <span class="discount">60% OFF</span></div>
-
-        <div class="selection">
-          <select>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-          </select>
-          <select>
-            <option>Colour</option>
-            <option>Red</option>
-            <option>Blue</option>
-            <option>Green</option>
-          </select>
-        </div>
-
-        <div class="selection">
-          <select>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-          </select>
-          <select>
-            <option>Colour</option>
-            <option>Red</option>
-            <option>Blue</option>
-            <option>Green</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="info">Free 2 Day Shipping</div>
-    <div class="total">Total : <span>DKK 360.00</span></div>
-    <button class="button">+ Add to Cart</button>
+    <div class="info">Free 2-Day Shipping</div>
+    <div class="total">Total: <span id="total">DKK 360</span></div>
+    <button class="button">Add to Cart</button>
   </div>
+
+  <script>
+    const bundles = document.querySelectorAll('.bundle');
+    const total = document.getElementById('total');
+
+    bundles.forEach(bundle => {
+      const radio = bundle.querySelector('input');
+      radio.addEventListener('change', () => {
+        bundles.forEach(b => b.classList.remove('selected'));
+        bundle.classList.add('selected');
+        total.textContent = 'DKK ' + bundle.getAttribute('data-price');
+      });
+    });
+  </script>
 </body>
 </html>
