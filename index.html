@@ -35,6 +35,7 @@
       border-radius: 8px;
       padding: 10px;
       margin-bottom: 15px;
+      position: relative;
     }
 
     .bundle.selected {
@@ -46,14 +47,17 @@
       margin-right: 10px;
     }
 
-    .price {
+    .price-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-weight: bold;
       color: #333;
     }
 
     .discount {
-      float: right;
       color: #b30059;
+      font-size: 0.85rem;
     }
 
     .selects {
@@ -93,21 +97,30 @@
     <div class="bundle" data-price="195">
       <label>
         <input type="radio" name="bundle" />
-        1 Face Powder - DKK 195 <span class="discount">10% OFF</span>
+        <div class="price-line">
+          <span>1 Face Powder - DKK 195</span>
+          <span class="discount">10% OFF</span>
+        </div>
       </label>
     </div>
 
     <div class="bundle" data-price="345">
       <label>
         <input type="radio" name="bundle" />
-        1 Face Powder + 1 Lotion - DKK 345 <span class="discount">25% OFF</span>
+        <div class="price-line">
+          <span>1 Face Powder + 1 Lotion - DKK 345</span>
+          <span class="discount">25% OFF</span>
+        </div>
       </label>
     </div>
 
     <div class="bundle selected" data-price="360">
       <label>
         <input type="radio" name="bundle" checked />
-        1 Face Powder + 1 Lotion + 1 Lipstick - DKK 528 <span class="discount">40% OFF</span>
+        <div class="price-line">
+          <span>1 Powder + 1 Lotion + 1 Lipstick - DKK 528</span>
+          <span class="discount">40% OFF</span>
+        </div>
       </label>
 
       <div class="selects">
