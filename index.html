@@ -1,16 +1,172 @@
-<body>
-  <div class="box" id="box1">
-    <div class="box-header">Choose Top Box</div>
-    <div class="arrow">▼</div>
-  </div>
-  <div class="box" id="box2">
-    <div class="box-header">Choose Middle Box</div>
-    <div class="arrow">▼</div>
-  </div>
-  <div class="box" id="box3">
-    <div class="box-header">Choose Bottom Box</div>
-    <div class="arrow">▼</div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bundle & Save</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-  <script src="script.js"></script>
+    .container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px 25px;
+      width: 350px;
+    }
+
+    .title {
+      text-align: center;
+      color: #007040;
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .bundle {
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .bundle.selected {
+      border-color: #007040;
+      background-color: #e6f2ef;
+    }
+
+    .bundle input {
+      position: absolute;
+      left: 15px;
+      top: 20px;
+    }
+
+    .bundle-content {
+      padding-left: 35px;
+    }
+
+    .price {
+      font-weight: bold;
+    }
+
+    .discount {
+      float: right;
+      color: #007040;
+      font-weight: bold;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      color: white;
+      background-color: #007040;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 10px;
+    }
+
+    .selection {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .selection select {
+      width: 48%;
+      padding: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .info {
+      color: #007040;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    .total {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .button {
+      margin-top: 20px;
+      background-color: #007040;
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Bundle & Save</div>
+
+    <div class="bundle">
+      <input type="radio" name="bundle" />
+      <div class="bundle-content">
+        <div class="price">1 Pair - DKK 195.00 <span class="discount">50% OFF</span></div>
+      </div>
+    </div>
+
+    <div class="bundle">
+      <input type="radio" name="bundle" />
+      <div class="bundle-content">
+        <div class="price">2 Pair - DKK 345.00 <span class="discount">40% OFF</span> <span class="tag">Most Popular</span></div>
+      </div>
+    </div>
+
+    <div class="bundle selected">
+      <input type="radio" name="bundle" checked />
+      <div class="bundle-content">
+        <div class="price">3 Pair - DKK 528.00 <span class="discount">60% OFF</span></div>
+
+        <div class="selection">
+          <select>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select>
+          <select>
+            <option>Colour</option>
+            <option>Red</option>
+            <option>Blue</option>
+            <option>Green</option>
+          </select>
+        </div>
+
+        <div class="selection">
+          <select>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select>
+          <select>
+            <option>Colour</option>
+            <option>Red</option>
+            <option>Blue</option>
+            <option>Green</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="info">Free 2 Day Shipping</div>
+    <div class="total">Total : <span>DKK 360.00</span></div>
+    <button class="button">+ Add to Cart</button>
+  </div>
 </body>
+</html>
